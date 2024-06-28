@@ -1,9 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function BussinesItem({ bussines }) {
     return (
-        <div className='p-3 hover:border rounded-xl hover:border-primary cursor-pointer
+        <Link
+        href={'/restaurant/'+bussines?.slug} 
+        className='p-3 hover:border rounded-xl hover:border-primary cursor-pointer
         transition-all ease-in-out hover:bg-orange-50'>
             <Image src={bussines.banner?.url} alt={bussines.name}
                 width={500}
@@ -23,7 +26,7 @@ function BussinesItem({ bussines }) {
                 <h2 className='text-sm text-primary'>{bussines.categories[0].name}</h2>
             </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

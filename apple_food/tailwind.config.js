@@ -24,7 +24,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#F44322",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -73,7 +73,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),
-    require('tailwind-scrollbar-hide')
-  ],
+  plugins: [require("tailwindcss-animate",)],
 }
