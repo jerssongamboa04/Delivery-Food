@@ -2,6 +2,7 @@ import React from 'react'
 import { TabView, TabPanel } from 'primereact/tabview';
 import MenuSection from "../_components/MenuSection";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs";
+import ReviewSection from "../_components/ReviewSection";
 
 
 function RestroTabs({restaurant}) {
@@ -17,7 +18,9 @@ function RestroTabs({restaurant}) {
             <MenuSection restaurant={restaurant}/>
         </TabsContent>
         <TabsContent value="about">About</TabsContent>
-        <TabsContent value="reviews">Reviews</TabsContent>
+        <TabsContent value="reviews">
+          <ReviewSection restaurant={restaurant}/>
+        </TabsContent>
 
       </Tabs>
       
